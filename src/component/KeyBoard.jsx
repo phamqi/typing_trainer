@@ -78,7 +78,6 @@ class KeyBoard extends Component {
     const typing__input = document.querySelector("#typing__input");
     keys.forEach((item, index) => {
       item.onclick = () => {
-        console.log("alo alo", keys[index].innerText);
         switch (keys[index].innerText) {
           case "123":
             this.setState({
@@ -105,10 +104,8 @@ class KeyBoard extends Component {
   addFncEvent() {
     const fncs = document.querySelectorAll(".keyboard__key.fnc");
     const typing__input = document.querySelector("#typing__input");
-    console.log(fncs);
     fncs.forEach((item, index) => {
       item.onclick = () => {
-        console.log(fncs[index].innerText);
         switch (fncs[index].innerText) {
           case "Backspace":
             const typingValue = typing__input.value.slice(0, -1);
@@ -136,7 +133,6 @@ class KeyBoard extends Component {
   }
   componentDidUpdate() {}
   render() {
-    console.log("rerender in render keyborad");
     return (
       <div className="keyboard__wrapper">
         <div
