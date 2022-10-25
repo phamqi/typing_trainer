@@ -73,7 +73,6 @@ export default class App extends Component {
 
   componentDidUpdate() {}
   render() {
-    console.log("rerednder");
     const snows = [];
     for (let i = 0; i < 5; i++) {
       let random = Math.floor((Math.random() + 1) * 10);
@@ -82,7 +81,6 @@ export default class App extends Component {
       );
       snows.push(snow);
     }
-    console.log("app rerender");
     return (
       <div
         className="App"
